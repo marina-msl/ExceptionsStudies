@@ -2,17 +2,18 @@ import java.awt.Checkbox;
 
 import domain.CheckoutAccount;
 
-public class FlowNullPointerExecption {
+public class FlowOurOwnExceptionUnchecked {
 
 	public static void main(String[] args) {
 		System.out.println("Start main");
 		try {
 			method1();
-		} catch (ArithmeticException | NullPointerException ex) {
+		} catch (ArithmeticException | NullPointerException | MyExceptionUnchecked ex) {
 			//ArithmeticException and NullPointerException are Java's class!
 			//So that ex is a reference of Arithmetic or NullPointer Java's class!
-			System.out.println("Exception: " + ex.getMessage());
-			//using a public method of the ArithmeticException class!
+			System.out.println("Exception: ");
+			System.out.println(ex.getMessage());
+			//using a public method of the RunTimeException class!
 			ex.printStackTrace();
 		}
 		System.out.println("End main");
@@ -26,9 +27,7 @@ public class FlowNullPointerExecption {
 
 	private static void method2() {
 		System.out.println("Start method 2");
-
-		throw new NullPointerException("trouble");
-		
-		//System.out.println("End method2");
+		method2();
+		System.out.println("End method 2");
 	}
 }

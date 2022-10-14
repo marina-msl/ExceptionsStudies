@@ -2,7 +2,7 @@ import java.awt.Checkbox;
 
 import domain.CheckoutAccount;
 
-public class FlowNullPointerExecption {
+public class FlowExceptions {
 
 	public static void main(String[] args) {
 		System.out.println("Start main");
@@ -27,7 +27,7 @@ public class FlowNullPointerExecption {
 	private static void method2() {
 		System.out.println("Start method 2");
 
-		throw new NullPointerException("trouble");
+		throw new ArithmeticException("trouble");
 		
 		//System.out.println("End method2");
 	}
