@@ -13,7 +13,7 @@ public class AccountsTest {
 			 System.out.println("Insuficient Balance Exception " + e.getMessage());
 			 e.printStackTrace();
 		 }
-		 System.out.println("Balance:" + account.getTotal());
+		 System.out.println("Balance: " + account.getTotal());
 	}
 
 }
