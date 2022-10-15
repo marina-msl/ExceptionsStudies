@@ -3,10 +3,13 @@ package domain;
 public class Accounts {
 
 	protected int id;
-	private String number;
+	private Integer number;
 	private Double total;
 	
-	public Accounts(String number, Double total) {
+	public Accounts(Integer number, Double total) {
+		if(number < 1) {
+			throw new IllegalArgumentException();
+		}
 		this.number = number;
 		this.total = total;
 	}

@@ -3,7 +3,7 @@ package domain;
 public class CheckoutAccount extends Accounts {
 
 	
-	public CheckoutAccount(String number, Double total) {
+	public CheckoutAccount(Integer number, Double total) {
 		super(number, total);
 	}
 
